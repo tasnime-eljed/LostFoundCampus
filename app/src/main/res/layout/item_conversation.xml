@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:minHeight="@dimen/lf_touch_target"
+    android:paddingStart="@dimen/lf_screen_padding"
+    android:paddingTop="@dimen/lf_space_md"
+    android:paddingEnd="@dimen/lf_screen_padding"
+    android:paddingBottom="@dimen/lf_space_md">
+
+    <TextView
+        android:id="@+id/txtAvatar"
+        style="@style/Widget.LF.Avatar"
+        android:layout_width="@dimen/lf_avatar_md"
+        android:layout_height="@dimen/lf_avatar_md"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="SM" />
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/lf_space_md"
+        android:layout_marginEnd="@dimen/lf_space_sm"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.LF.TitleMedium"
+        app:layout_constraintEnd_toStartOf="@id/txtTime"
+        app:layout_constraintStart_toEndOf="@id/txtAvatar"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Sara Mansour" />
+
+    <TextView
+        android:id="@+id/txtTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.LF.Caption"
+        app:layout_constraintBaseline_toBaselineOf="@id/txtName"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="10:42" />
+
+    <TextView
+        android:id="@+id/txtPreview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/lf_space_md"
+        android:layout_marginTop="@dimen/lf_space_xxs"
+        android:layout_marginEnd="@dimen/lf_space_sm"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.LF.BodySmall"
+        android:textColor="@color/lf_ink_body"
+        app:layout_constraintEnd_toStartOf="@id/unreadDot"
+        app:layout_constraintStart_toEndOf="@id/txtAvatar"
+        app:layout_constraintTop_toBottomOf="@id/txtName"
+        tools:text="Bonjour, je pense avoir trouvé votre iPhone…" />
+
+    <View
+        android:id="@+id/unreadDot"
+        android:layout_width="@dimen/lf_unread_dot"
+        android:layout_height="@dimen/lf_unread_dot"
+        android:background="@drawable/bg_unread_dot"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="@id/txtPreview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txtPreview" />
+
+    <TextView
+        android:id="@+id/txtLinked"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/lf_space_md"
+        android:layout_marginTop="@dimen/lf_space_xxs"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.LF.LabelStrong"
+        android:textColor="@color/lf_ink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txtAvatar"
+        app:layout_constraintTop_toBottomOf="@id/txtPreview"
+        tools:text="iPhone 13 noir" />
+</androidx.constraintlayout.widget.ConstraintLayout>

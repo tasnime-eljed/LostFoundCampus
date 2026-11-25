@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Palette extraite des maquettes du rapport (pixels échantillonnés). -->
+<resources>
+    <!-- Violets (identité) -->
+    <color name="lf_violet_900">#2E1A2E</color>   <!-- encre, bas du dégradé de connexion -->
+    <color name="lf_violet_800">#3B2340</color>   <!-- carte de connexion -->
+    <color name="lf_violet_700">#4A2A4E</color>   <!-- haut du dégradé de connexion -->
+    <color name="lf_violet_600">#502D55</color>   <!-- couleur principale -->
+    <color name="lf_violet_line">#523655</color>  <!-- contour sur fond sombre -->
+    <color name="lf_violet_400">#826981</color>   <!-- message en cours d'envoi -->
+    <color name="lf_mauve">#935073</color>        <!-- accent secondaire, barre < 90 % -->
+    <color name="lf_mauve_status">#A05A85</color> <!-- « En ligne récemment » -->
+
+    <!-- Rose / pêche -->
+    <color name="lf_pink_100">#F6E3EC</color>     <!-- badge Perdu, onglet actif -->
+    <color name="lf_pink_ink">#6E2E5E</color>
+    <color name="lf_peach">#F6DBC0</color>        <!-- accent pêche, badge Trouvé -->
+    <color name="lf_peach_ink">#5B395C</color>
+
+    <!-- Neutres chauds -->
+    <color name="lf_cream">#F8F4E9</color>        <!-- fond des écrans -->
+    <color name="lf_white">#FFFFFF</color>
+    <color name="lf_sand">#E9DDD3</color>         <!-- piste des onglets, piste de progression -->
+    <color name="lf_outline">#ECE3DA</color>      <!-- contours des champs et puces -->
+    <color name="lf_outline_soft">#F2EAE0</color> <!-- contours des cartes -->
+    <color name="lf_returned_bg">#EDE4DC</color>  <!-- badge Restituée -->
+    <color name="lf_returned_ink">#6B5A60</color>
+    <color name="lf_slate_200">#CBD5E1</color>    <!-- fond des photos factices -->
+
+    <!-- Texte -->
+    <color name="lf_ink">#2E1A2E</color>
+    <color name="lf_ink_body">#4F3D4E</color>
+    <color name="lf_ink_secondary">#7A6878</color>
+    <color name="lf_on_dark">#F8F4E9</color>
+    <color name="lf_on_dark_muted">#D9C9D8</color>
+
+    <!-- États -->
+    <color name="lf_error">#C93636</color>
+    <color name="lf_error_border">#E35151</color>
+    <color name="lf_error_on_dark">#FFB3B3</color>
+    <color name="lf_success">#2F7D55</color>
+    <color name="lf_scrim">#B32E1A2E</color>
+
+    <!-- Animation d'analyse IA -->
+    <color name="ai_violet">#A274D6</color>
+    <color name="ai_pink">#EE7AB3</color>
+    <color name="ai_blue">#6FA8F5</color>
+    <color name="ai_peach">#F7C59F</color>
+    <color name="ai_scrim">#CC1C111D</color>
+    <color name="ai_band">#66FFFFFF</color>
+
+    <!-- Nuancier des couleurs d'objets (données) -->
+    <color name="swatch_black">#1B1720</color>
+    <color name="swatch_white">#FFFFFF</color>
+    <color name="swatch_grey">#9AA0A6</color>
+    <color name="swatch_red">#D03B3B</color>
+    <color name="swatch_blue">#3F6FD1</color>
+    <color name="swatch_green">#3E8E5A</color>
+    <color name="swatch_brown">#8A5A3C</color>
+    <color name="swatch_other">#C9B8C7</color>
+
+    <!-- Illustrations factices -->
+    <color name="illu_phone">#1F1A24</color>
+    <color name="illu_screen">#3A3442</color>
+    <color name="illu_crack">#C7CCD6</color>
+    <color name="illu_metal">#B8BCC4</color>
+    <color name="illu_metal_dark">#8C9099</color>
+    <color name="illu_keychain">#D03B3B</color>
+    <color name="illu_bag">#3F6FD1</color>
+    <color name="illu_bag_dark">#2D539F</color>
+    <color name="illu_wallet">#8A5A3C</color>
+    <color name="illu_wallet_dark">#6A422A</color>
+    <color name="illu_case">#5B8DE0</color>
+</resources>

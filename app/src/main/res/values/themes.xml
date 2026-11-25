@@ -1,0 +1,52 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Thème clair unique : l'identité crème / violet des maquettes. -->
+    <style name="Base.Theme.LostFoundCampus" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/lf_violet_600</item>
+        <item name="colorOnPrimary">@color/lf_white</item>
+        <item name="colorPrimaryContainer">@color/lf_pink_100</item>
+        <item name="colorOnPrimaryContainer">@color/lf_pink_ink</item>
+        <item name="colorPrimaryInverse">@color/lf_peach</item>
+
+        <item name="colorSecondary">@color/lf_mauve</item>
+        <item name="colorOnSecondary">@color/lf_white</item>
+        <item name="colorSecondaryContainer">@color/lf_peach</item>
+        <item name="colorOnSecondaryContainer">@color/lf_violet_900</item>
+
+        <item name="colorTertiary">@color/lf_peach_ink</item>
+        <item name="colorOnTertiary">@color/lf_white</item>
+        <item name="colorTertiaryContainer">@color/lf_peach</item>
+        <item name="colorOnTertiaryContainer">@color/lf_peach_ink</item>
+
+        <item name="colorError">@color/lf_error</item>
+        <item name="colorOnError">@color/lf_white</item>
+
+        <item name="android:colorBackground">@color/lf_cream</item>
+        <item name="colorOnBackground">@color/lf_ink</item>
+        <item name="colorSurface">@color/lf_white</item>
+        <item name="colorOnSurface">@color/lf_ink</item>
+        <item name="colorSurfaceVariant">@color/lf_sand</item>
+        <item name="colorOnSurfaceVariant">@color/lf_ink_secondary</item>
+        <item name="colorOutline">@color/lf_outline</item>
+        <item name="colorOutlineVariant">@color/lf_outline_soft</item>
+        <item name="colorSurfaceContainerLowest">@color/lf_white</item>
+        <item name="colorSurfaceContainerLow">@color/lf_white</item>
+        <item name="colorSurfaceContainer">@color/lf_white</item>
+        <item name="colorSurfaceContainerHigh">@color/lf_cream</item>
+        <item name="colorSurfaceContainerHighest">@color/lf_sand</item>
+
+        <item name="shapeAppearanceCornerSmall">@style/ShapeAppearance.LF.Small</item>
+        <item name="shapeAppearanceCornerMedium">@style/ShapeAppearance.LF.Medium</item>
+        <item name="shapeAppearanceCornerLarge">@style/ShapeAppearance.LF.Large</item>
+
+        <item name="textInputStyle">@style/Widget.LF.TextField</item>
+        <item name="materialButtonStyle">@style/Widget.LF.Button</item>
+        <item name="materialCardViewStyle">@style/Widget.LF.Card</item>
+        <item name="bottomNavigationStyle">@style/Widget.LF.BottomNav</item>
+
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowBackground">@color/lf_cream</item>
+    </style>
+
+    <style name="Theme.LostFoundCampus" parent="Base.Theme.LostFoundCampus" />
+</resources>

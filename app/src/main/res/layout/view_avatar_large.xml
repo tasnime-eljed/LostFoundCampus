@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Grand avatar : initiales, remplacées par la photo de profil si elle existe. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/lf_avatar_lg"
+    android:layout_height="@dimen/lf_avatar_lg"
+    android:contentDescription="@string/cd_profile_photo">
+
+    <TextView
+        android:id="@+id/txtInitials"
+        style="@style/Widget.LF.Avatar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAppearance="@style/TextAppearance.LF.Logo"
+        android:textColor="@color/lf_white" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:importantForAccessibility="no"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.LF.Circle" />
+</FrameLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="lf_max_photos">5</integer>
+    <integer name="lf_password_min_length">8</integer>
+    <integer name="lf_match_threshold">60</integer>
+    <integer name="lf_match_strong">90</integer>
+    <integer name="ai_status_interval_ms">800</integer>
+    <integer name="ai_rotation_duration_ms">2400</integer>
+    <integer name="ai_scan_duration_ms">1600</integer>
+    <!-- Messagerie par polling : conversation ouverte, liste, plafond en cas d'erreur réseau. -->
+    <integer name="lf_poll_chat_ms">4000</integer>
+    <integer name="lf_poll_list_ms">15000</integer>
+    <integer name="lf_poll_max_ms">60000</integer>
+    <integer name="lf_map_zoom_preview">17</integer>
+    <integer name="lf_map_zoom_picker">18</integer>
+</resources>

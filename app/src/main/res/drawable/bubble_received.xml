@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="@color/lf_white" />
+    <stroke android:width="@dimen/lf_stroke" android:color="@color/lf_outline_soft" />
+    <corners
+        android:topLeftRadius="@dimen/lf_radius_bubble"
+        android:topRightRadius="@dimen/lf_radius_bubble"
+        android:bottomLeftRadius="@dimen/lf_radius_bubble_tail"
+        android:bottomRightRadius="@dimen/lf_radius_bubble" />
+</shape>

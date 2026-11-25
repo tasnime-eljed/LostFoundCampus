@@ -1,0 +1,6 @@
+## Copier ces lignes dans local.properties (ce fichier n'est pas versionné).
+## Valeurs : Supabase > Project Settings > API Keys / Data API.
+SUPABASE_URL=https://votre-projet.supabase.co
+SUPABASE_PUBLISHABLE_KEY=sb_publishable_xxxxxxxxxxxxxxxx
+# Facultatif : mot de passe des comptes de démonstration (supabase/seed_demo.sql)
+DEMO_PASSWORD=

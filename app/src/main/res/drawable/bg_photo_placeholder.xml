@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Fond affiché pendant le chargement d'une photo, ou si elle ne peut pas s'afficher. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/lf_slate_200" />
+    <item
+        android:width="@dimen/lf_icon_lg"
+        android:height="@dimen/lf_icon_lg"
+        android:drawable="@drawable/ic_photo_placeholder"
+        android:gravity="center" />
+</layer-list>

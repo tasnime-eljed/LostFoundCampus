@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- État vide commun : il invite toujours à une action. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/emptyRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/lf_space_xxxl"
+    android:paddingTop="@dimen/lf_space_xxxl"
+    android:paddingEnd="@dimen/lf_space_xxxl"
+    android:paddingBottom="@dimen/lf_space_xxxl">
+
+    <ImageView
+        android:id="@+id/imgEmpty"
+        android:layout_width="@dimen/lf_icon_lg"
+        android:layout_height="@dimen/lf_icon_lg"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_inbox"
+        app:tint="@color/lf_mauve" />
+
+    <TextView
+        android:id="@+id/txtEmptyTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/lf_space_md"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.LF.TitleMedium" />
+
+    <TextView
+        android:id="@+id/txtEmptyBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/lf_space_xs"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.LF.BodySmall" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnEmptyAction"
+        style="@style/Widget.LF.Button.Outlined"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/lf_space_lg"
+        android:visibility="gone" />
+</LinearLayout>

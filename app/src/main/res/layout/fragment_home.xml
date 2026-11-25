@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lf_cream">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lf_cream"
+        app:elevation="0dp"
+        app:liftOnScroll="false">
+
+        <!-- Salutation + recherche : se replient au défilement -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/lf_screen_padding"
+            android:paddingTop="@dimen/lf_space_lg"
+            android:paddingEnd="@dimen/lf_screen_padding"
+            app:layout_scrollFlags="scroll|enterAlways|snap">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtGreeting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.LF.BodySmall" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:accessibilityHeading="true"
+                        android:text="@string/app_name"
+                        android:textAppearance="@style/TextAppearance.LF.Title" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/avatarButton"
+                    android:layout_width="@dimen/lf_avatar_md"
+                    android:layout_height="@dimen/lf_avatar_md"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:contentDescription="@string/cd_profile_avatar"
+                    android:focusable="true">
+
+                    <TextView
+                        android:id="@+id/txtAvatar"
+                        style="@style/Widget.LF.Avatar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/imgAvatar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:importantForAccessibility="no"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone"
+                        app:shapeAppearanceOverlay="@style/ShapeAppearance.LF.Circle" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/lf_space_lg"
+                app:endIconMode="clear_text"
+                app:startIconContentDescription="@string/cd_search"
+                app:startIconDrawable="@drawable/ic_search"
+                app:startIconTint="@color/lf_ink_secondary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etSearch"
+                    style="@style/Widget.LF.EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/home_search_hint"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <!-- Onglets et catégories : restent visibles -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/lf_space_md"
+            android:paddingBottom="@dimen/lf_space_sm">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabsType"
+                style="@style/Widget.LF.SegmentedTabs"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/lf_segmented_height"
+                android:layout_marginStart="@dimen/lf_screen_padding"
+                android:layout_marginEnd="@dimen/lf_screen_padding">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/filter_all" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/filter_lost" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/filter_found" />
+            </com.google.android.material.tabs.TabLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/lf_space_xs"
+                android:clipToPadding="false"
+                android:contentDescription="@string/categories_label"
+                android:paddingStart="@dimen/lf_screen_padding"
+                android:paddingEnd="@dimen/lf_screen_padding"
+                android:scrollbars="none">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipsCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:chipSpacingHorizontal="@dimen/lf_space_sm"
+                    app:selectionRequired="false"
+                    app:singleLine="true"
+                    app:singleSelection="true" />
+            </HorizontalScrollView>
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingTop="@dimen/lf_space_xs"
+            android:paddingBottom="@dimen/lf_space_huge" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/lf_space_huge"
+            android:contentDescription="@string/loading"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:indicatorColor="@color/lf_violet_600" />
+
+        <include
+            android:id="@+id/empty"
+            layout="@layout/view_empty_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabPublish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/lf_screen_padding"
+        android:text="@string/home_publish"
+        android:textAppearance="@style/TextAppearance.LF.Button"
+        android:textColor="@color/lf_white"
+        app:backgroundTint="@color/lf_violet_600"
+        android:elevation="@dimen/lf_fab_elevation"
+        app:icon="@drawable/ic_add"
+        app:iconTint="@color/lf_white"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.LF.Large" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

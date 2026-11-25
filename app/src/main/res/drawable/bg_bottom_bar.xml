@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Barre d'action collée en bas (trait supérieur + fond blanc). -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item><shape><solid android:color="@color/lf_outline_soft" /></shape></item>
+    <item android:top="@dimen/lf_stroke"><shape><solid android:color="@color/lf_white" /></shape></item>
+</layer-list>

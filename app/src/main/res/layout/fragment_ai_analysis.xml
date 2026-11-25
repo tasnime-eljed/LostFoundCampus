@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Overlay plein écran au-dessus de toute l'interface et de la photo. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lf_violet_900"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/imgPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:importantForAccessibility="no"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/sample_phone_found" />
+
+    <com.example.lostfoundcampus.ui.publish.AiScanView
+        android:id="@+id/aiScan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/cd_ai_animation" />
+
+    <LinearLayout
+        android:id="@+id/panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/lf_screen_padding"
+        android:paddingEnd="@dimen/lf_screen_padding"
+        android:paddingBottom="@dimen/lf_space_xxl">
+
+        <ImageView
+            android:layout_width="@dimen/lf_icon_md"
+            android:layout_height="@dimen/lf_icon_md"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_sparkle"
+            app:tint="@color/ai_peach" />
+
+        <TextView
+            android:id="@+id/txtStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/lf_space_sm"
+            android:accessibilityLiveRegion="polite"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.LF.Title"
+            android:textColor="@color/lf_on_dark"
+            tools:text="@string/ai_status_detect" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/lf_space_xs"
+            android:gravity="center"
+            android:text="@string/ai_hint"
+            android:textAppearance="@style/TextAppearance.LF.BodySmall"
+            android:textColor="@color/lf_on_dark_muted" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancel"
+            style="@style/Widget.LF.Button.Outlined.OnDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/lf_space_xl"
+            android:text="@string/ai_cancel" />
+    </LinearLayout>
+</FrameLayout>

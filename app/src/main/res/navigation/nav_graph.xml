@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Graphe unique. Le point de départ passe de la connexion à l'accueil après
+     authentification (MainActivity.showMain / showAuth). -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <!-- Authentification -->
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.lostfoundcampus.ui.auth.LoginFragment" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.lostfoundcampus.ui.auth.RegisterFragment" />
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.example.lostfoundcampus.ui.auth.ForgotPasswordFragment" />
+
+    <!-- Onglets -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.lostfoundcampus.ui.home.HomeFragment" />
+    <fragment
+        android:id="@+id/publishFragment"
+        android:name="com.example.lostfoundcampus.ui.publish.PublishFragment" />
+    <fragment
+        android:id="@+id/messagesFragment"
+        android:name="com.example.lostfoundcampus.ui.messages.MessagesFragment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.lostfoundcampus.ui.profile.ProfileFragment" />
+
+    <!-- Flux de publication -->
+    <fragment
+        android:id="@+id/photoPreviewFragment"
+        android:name="com.example.lostfoundcampus.ui.publish.PhotoPreviewFragment" />
+    <fragment
+        android:id="@+id/cropFragment"
+        android:name="com.example.lostfoundcampus.ui.publish.CropFragment" />
+    <fragment
+        android:id="@+id/aiAnalysisFragment"
+        android:name="com.example.lostfoundcampus.ui.publish.AiAnalysisFragment" />
+    <fragment
+        android:id="@+id/locationPickerFragment"
+        android:name="com.example.lostfoundcampus.ui.map.LocationPickerFragment" />
+
+    <!-- Consultation -->
+    <fragment
+        android:id="@+id/announcementDetailFragment"
+        android:name="com.example.lostfoundcampus.ui.detail.AnnouncementDetailFragment" />
+    <fragment
+        android:id="@+id/matchesFragment"
+        android:name="com.example.lostfoundcampus.ui.matches.MatchesFragment" />
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.lostfoundcampus.ui.messages.ChatFragment" />
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.example.lostfoundcampus.ui.profile.EditProfileFragment" />
+</navigation>

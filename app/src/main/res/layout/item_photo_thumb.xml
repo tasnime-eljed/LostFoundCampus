@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/lf_space_sm"
+    android:paddingEnd="@dimen/lf_space_sm">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgThumb"
+        android:layout_width="@dimen/lf_thumb_photo"
+        android:layout_height="@dimen/lf_thumb_photo"
+        android:background="@color/lf_slate_200"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.LF.Medium"
+        tools:src="@drawable/sample_iphone" />
+
+    <ImageButton
+        android:id="@+id/btnRemove"
+        android:layout_width="@dimen/lf_touch_target"
+        android:layout_height="@dimen/lf_touch_target"
+        android:layout_gravity="top|end"
+        android:background="@drawable/bg_thumb_remove"
+        android:padding="@dimen/lf_space_lg"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_close"
+        app:tint="@color/lf_ink" />
+</FrameLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lf_cream">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/lf_screen_padding"
+        android:paddingTop="@dimen/lf_space_xxl"
+        android:paddingEnd="@dimen/lf_screen_padding"
+        android:paddingBottom="@dimen/lf_space_xxl">
+
+        <include
+            android:id="@+id/avatar"
+            layout="@layout/view_avatar_large"
+            android:layout_width="@dimen/lf_avatar_lg"
+            android:layout_height="@dimen/lf_avatar_lg"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/lf_space_md"
+            android:accessibilityHeading="true"
+            android:textAppearance="@style/TextAppearance.LF.Title" />
+
+        <TextView
+            android:id="@+id/txtEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textAppearance="@style/TextAppearance.LF.BodySmall" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEditProfile"
+            style="@style/Widget.LF.Button.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/profile_edit"
+            app:icon="@drawable/ic_edit" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/lf_space_lg"
+            android:accessibilityHeading="true"
+            android:text="@string/profile_my_announcements"
+            android:textAppearance="@style/TextAppearance.LF.TitleMedium" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/lf_space_xs"
+            android:scrollbars="none">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipsFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:checkedChip="@id/chipAll"
+                app:chipSpacingHorizontal="@dimen/lf_space_sm"
+                app:selectionRequired="true"
+                app:singleLine="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipAll"
+                    style="@style/Widget.LF.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile_filter_all" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipLost"
+                    style="@style/Widget.LF.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile_filter_lost" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipFound"
+                    style="@style/Widget.LF.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile_filter_found" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipReturned"
+                    style="@style/Widget.LF.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile_filter_returned" />
+            </com.google.android.material.chip.ChipGroup>
+        </HorizontalScrollView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/lf_space_sm"
+            android:nestedScrollingEnabled="false" />
+
+        <include
+            android:id="@+id/empty"
+            layout="@layout/view_empty_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogout"
+            style="@style/Widget.LF.Button.Outlined.Danger"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/lf_space_xxl"
+            android:text="@string/profile_logout"
+            app:icon="@drawable/ic_logout"
+            app:iconGravity="textStart" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

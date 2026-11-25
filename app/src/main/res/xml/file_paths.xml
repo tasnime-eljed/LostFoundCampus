@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Dossier partagé avec l'appareil photo (TakePicture) : cache privé, nettoyé par le système. -->
+<paths>
+    <cache-path name="camera" path="camera/" />
+</paths>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lf_cream">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/lf_screen_padding"
+        android:paddingTop="@dimen/lf_space_lg"
+        android:paddingEnd="@dimen/lf_screen_padding"
+        android:paddingBottom="@dimen/lf_space_xxl">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/layout_screen_header" />
+
+        <include
+            android:id="@+id/avatar"
+            layout="@layout/view_avatar_large"
+            android:layout_width="@dimen/lf_avatar_lg"
+            android:layout_height="@dimen/lf_avatar_lg"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/lf_space_xl" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnChangePhoto"
+            style="@style/Widget.LF.Button.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/edit_profile_change_photo"
+            app:icon="@drawable/ic_gallery" />
+
+        <!-- Informations -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/lf_space_md">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/lf_space_xl">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:accessibilityHeading="true"
+                    android:text="@string/edit_profile_info_section"
+                    android:textAppearance="@style/TextAppearance.LF.TitleMedium" />
+
+                <TextView
+                    style="@style/Widget.LF.FieldLabel"
+                    android:labelFor="@id/etName"
+                    android:text="@string/label_full_name" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etName"
+                        android:maxLength="80"
+                        style="@style/Widget.LF.EditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="name"
+                        android:hint="@string/hint_full_name"
+                        android:inputType="textPersonName|textCapWords" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    style="@style/Widget.LF.FieldLabel"
+                    android:text="@string/label_university_email" />
+
+                <TextView
+                    android:id="@+id/txtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.LF.Body"
+                    android:textColor="@color/lf_ink" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/edit_profile_email_note"
+                    android:textAppearance="@style/TextAppearance.LF.Caption" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSaveProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/lf_space_xl"
+                    android:text="@string/edit_profile_save" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Mot de passe -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/lf_space_lg">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/lf_space_xl">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:accessibilityHeading="true"
+                    android:text="@string/edit_profile_password_section"
+                    android:textAppearance="@style/TextAppearance.LF.TitleMedium" />
+
+                <TextView
+                    style="@style/Widget.LF.FieldLabel"
+                    android:labelFor="@id/etCurrent"
+                    android:text="@string/label_current_password" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilCurrent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:endIconMode="password_toggle">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etCurrent"
+                        style="@style/Widget.LF.EditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="password"
+                        android:inputType="textPassword" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    style="@style/Widget.LF.FieldLabel"
+                    android:labelFor="@id/etNew"
+                    android:text="@string/label_new_password" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilNew"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:endIconMode="password_toggle"
+                    app:helperText="@string/helper_password_min"
+                    app:helperTextEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etNew"
+                        style="@style/Widget.LF.EditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="newPassword"
+                        android:hint="@string/hint_new_password"
+                        android:inputType="textPassword" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    style="@style/Widget.LF.FieldLabel"
+                    android:labelFor="@id/etConfirm"
+                    android:text="@string/label_confirm_new_password" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilConfirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:endIconMode="password_toggle">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etConfirm"
+                        style="@style/Widget.LF.EditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="newPassword"
+                        android:hint="@string/hint_confirm_password"
+                        android:inputType="textPassword" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnChangePassword"
+                    style="@style/Widget.LF.Button.Outlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/lf_space_xl"
+                    android:text="@string/edit_profile_password_submit" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

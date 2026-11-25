@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lf_cream">
+
+    <!-- En-tête : nom et statut -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/lf_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/lf_space_sm"
+        android:paddingTop="@dimen/lf_space_sm"
+        android:paddingEnd="@dimen/lf_screen_padding"
+        android:paddingBottom="@dimen/lf_space_sm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBack"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="@dimen/lf_touch_target"
+            android:layout_height="@dimen/lf_touch_target"
+            android:contentDescription="@string/cd_back"
+            app:icon="@drawable/ic_arrow_back"
+            app:iconTint="@color/lf_ink" />
+
+        <TextView
+            android:id="@+id/txtAvatar"
+            style="@style/Widget.LF.Avatar"
+            android:layout_width="@dimen/lf_avatar_md"
+            android:layout_height="@dimen/lf_avatar_md"
+            android:layout_marginStart="@dimen/lf_space_xs"
+            tools:text="SM" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/lf_space_md"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:accessibilityHeading="true"
+                android:textAppearance="@style/TextAppearance.LF.TitleMedium"
+                tools:text="Sara Mansour" />
+
+            <TextView
+                android:id="@+id/txtStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:textAppearance="@style/TextAppearance.LF.Caption"
+                android:textColor="@color/lf_mauve_status" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/headerDivider"
+        style="@style/Widget.LF.Divider"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header" />
+
+    <!-- Annonce liée -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardLinked"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/lf_space_lg"
+        android:layout_marginTop="@dimen/lf_space_md"
+        android:layout_marginEnd="@dimen/lf_space_lg"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerDivider">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/lf_space_md">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgLinked"
+                android:layout_width="@dimen/lf_thumb_sm"
+                android:layout_height="@dimen/lf_thumb_sm"
+                android:background="@color/lf_slate_200"
+                android:importantForAccessibility="no"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.LF.Small" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/lf_space_md"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtLinkedLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.LF.Caption"
+                    android:textColor="@color/lf_pink_ink"
+                    tools:text="Annonce liée · Perdu" />
+
+                <TextView
+                    android:id="@+id/txtLinkedTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.LF.TitleMedium"
+                    tools:text="iPhone 13 noir" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingTop="@dimen/lf_space_md"
+        android:paddingBottom="@dimen/lf_space_md"
+        app:layout_constraintBottom_toTopOf="@id/inputBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardLinked" />
+
+    <TextView
+        android:id="@+id/txtEmpty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/lf_space_xxxl"
+        android:gravity="center"
+        android:text="@string/chat_empty_body"
+        android:textAppearance="@style/TextAppearance.LF.BodySmall"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/inputBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardLinked" />
+
+    <!-- Zone de saisie -->
+    <LinearLayout
+        android:id="@+id/inputBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_bottom_bar"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/lf_space_lg"
+        android:paddingTop="@dimen/lf_space_md"
+        android:paddingEnd="@dimen/lf_space_lg"
+        android:paddingBottom="@dimen/lf_space_md"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/groupDraft"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/lf_space_sm"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipDraft"
+                style="@style/Widget.LF.Chip.Ai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chat_ai_draft_chip"
+                app:closeIconVisible="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/chat_ai_draft_hint"
+                android:textAppearance="@style/TextAppearance.LF.Caption" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilMessage"
+                style="@style/Widget.LF.TextField.Pill"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etMessage"
+                        android:maxLength="2000"
+                    style="@style/Widget.LF.EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/chat_input_hint"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:maxLines="5"
+                    android:paddingStart="@dimen/lf_space_xl"
+                    android:paddingEnd="@dimen/lf_space_xl" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSend"
+                style="@style/Widget.LF.IconButton.Filled"
+                android:layout_width="@dimen/lf_send_button"
+                android:layout_height="@dimen/lf_send_button"
+                android:layout_marginStart="@dimen/lf_space_md"
+                android:contentDescription="@string/chat_send"
+                app:icon="@drawable/ic_send" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

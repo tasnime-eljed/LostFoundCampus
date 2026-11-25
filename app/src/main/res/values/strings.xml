@@ -1,0 +1,553 @@
+<resources>
+    <string name="app_name">LostFound Campus</string>
+    <string name="logo_initials">LF</string>
+
+    <!-- ===== Commun ===== -->
+    <string name="cd_back">Retour</string>
+    <string name="cd_close">Fermer</string>
+    <string name="cd_search">Rechercher</string>
+    <string name="action_cancel">Annuler</string>
+    <string name="action_confirm">Confirmer</string>
+    <string name="action_retry">Réessayer</string>
+    <string name="action_edit">Modifier</string>
+    <string name="action_save">Enregistrer</string>
+    <string name="required_suffix">%1$s *</string>
+    <string name="separator_dot">%1$s · %2$s</string>
+    <string name="loading">Chargement…</string>
+
+    <!-- ===== Erreurs réseau et serveur ===== -->
+    <string name="error_network">Pas de connexion à Internet. Vérifiez le réseau, puis réessayez.</string>
+    <string name="error_generic">L’opération n’a pas abouti. Réessayez dans un instant.</string>
+    <string name="error_server">Le serveur ne répond pas correctement. Réessayez dans quelques minutes.</string>
+    <string name="error_session_expired">Votre session a expiré. Connectez-vous à nouveau.</string>
+    <string name="error_forbidden">Cette action n’est pas autorisée avec votre compte.</string>
+    <string name="error_rate_limit">Trop de tentatives. Patientez une minute, puis réessayez.</string>
+    <string name="error_config_missing">Configuration Supabase manquante : ajoutez SUPABASE_URL et SUPABASE_PUBLISHABLE_KEY dans local.properties, puis recompilez.</string>
+    <string name="state_error_title">Chargement impossible</string>
+
+    <!-- ===== Navigation basse ===== -->
+    <string name="nav_home">Accueil</string>
+    <string name="nav_publish">Publier</string>
+    <string name="nav_messages">Messages</string>
+    <string name="nav_profile">Profil</string>
+
+    <!-- ===== Connexion ===== -->
+    <string name="login_welcome">Bienvenue sur LostFound Campus</string>
+    <string name="login_tagline">Retrouvez vos objets, reconnectez-vous à votre campus.</string>
+    <string name="label_university_email">E-mail universitaire</string>
+    <string name="hint_university_email">prenom.nom@universite.tn</string>
+    <string name="label_password">Mot de passe</string>
+    <string name="hint_password">Votre mot de passe</string>
+    <string name="login_forgot">Mot de passe oublié ?</string>
+    <string name="login_submit">Se connecter</string>
+    <string name="login_loading">Connexion…</string>
+    <string name="login_error_credentials">Adresse e-mail ou mot de passe incorrect. Vérifiez-les ou réinitialisez votre mot de passe.</string>
+    <string name="login_error_empty">Saisissez votre e-mail universitaire et votre mot de passe.</string>
+    <string name="login_no_account">Pas encore de compte ?</string>
+    <string name="login_create_account">Créer un compte</string>
+    <string name="cd_logo">Logo LostFound Campus</string>
+
+    <!-- ===== Création de compte ===== -->
+    <string name="register_toolbar">Créer un compte</string>
+    <string name="register_title">Rejoignez la communauté du campus</string>
+    <string name="register_subtitle">Utilisez votre adresse e-mail universitaire pour vous inscrire.</string>
+    <string name="label_full_name">Nom complet *</string>
+    <string name="hint_full_name">Prénom et nom</string>
+    <string name="label_university_email_required">E-mail universitaire *</string>
+    <string name="label_password_required">Mot de passe *</string>
+    <string name="hint_new_password">Au moins 8 caractères</string>
+    <string name="label_confirm_password">Confirmer le mot de passe *</string>
+    <string name="hint_confirm_password">Saisissez-le à nouveau</string>
+    <string name="helper_password_min">8 caractères minimum.</string>
+    <string name="register_submit">Créer mon compte</string>
+    <string name="register_loading">Création du compte…</string>
+    <string name="register_already">Déjà inscrit ?</string>
+    <string name="register_sign_in">Se connecter</string>
+    <string name="register_success">Compte créé. Bienvenue sur LostFound Campus.</string>
+    <string name="register_confirm_title">Confirmez votre adresse</string>
+    <string name="register_confirm_body">Un e-mail de confirmation a été envoyé à %1$s. Ouvrez le lien qu’il contient, puis connectez-vous.</string>
+    <string name="action_ok">J’ai compris</string>
+
+    <!-- ===== Erreurs de formulaire ===== -->
+    <string name="error_name_required">Indiquez votre nom complet.</string>
+    <string name="error_email_university">Utilisez votre adresse e-mail universitaire complète.</string>
+    <string name="error_password_short">Utilisez au moins 8 caractères.</string>
+    <string name="error_password_mismatch">Les deux mots de passe ne correspondent pas. Saisissez-les à nouveau.</string>
+    <string name="error_password_current">Mot de passe actuel incorrect. Vérifiez-le ou réinitialisez-le depuis l’écran de connexion.</string>
+    <string name="error_email_not_confirmed">Adresse non confirmée : ouvrez le lien reçu par e-mail, puis connectez-vous.</string>
+    <string name="error_user_exists">Un compte existe déjà avec cette adresse. Connectez-vous ou réinitialisez votre mot de passe.</string>
+    <string name="error_signup_disabled">Les inscriptions sont fermées pour le moment. Contactez l’administrateur de l’app.</string>
+    <string name="error_code_invalid">Code invalide ou expiré. Vérifiez-le ou demandez un nouveau code.</string>
+    <string name="error_code_required">Saisissez le code à 6 chiffres reçu par e-mail.</string>
+    <string name="error_password_current_required">Saisissez votre mot de passe actuel.</string>
+
+    <!-- ===== Mot de passe oublié ===== -->
+    <string name="forgot_toolbar">Mot de passe oublié</string>
+    <string name="forgot_title">Réinitialisez votre mot de passe</string>
+    <string name="forgot_subtitle">Saisissez votre e-mail universitaire. Nous vous enverrons un lien pour choisir un nouveau mot de passe.</string>
+    <string name="forgot_submit">Envoyer le lien</string>
+    <string name="forgot_loading">Envoi…</string>
+    <string name="forgot_code_title">Saisissez le code reçu</string>
+    <string name="forgot_code_body">Un code à 6 chiffres a été envoyé à %1$s. Pensez à vérifier vos courriers indésirables.</string>
+    <string name="label_code">Code reçu par e-mail *</string>
+    <string name="hint_code">123456</string>
+    <string name="forgot_reset_submit">Changer le mot de passe</string>
+    <string name="forgot_reset_loading">Modification…</string>
+    <string name="forgot_resend">Renvoyer le code</string>
+    <string name="forgot_code_resent">Nouveau code envoyé.</string>
+    <string name="forgot_reset_done">Mot de passe modifié. Vous êtes connecté.</string>
+
+    <!-- ===== Accueil ===== -->
+    <string name="home_greeting">Bonjour, %1$s</string>
+    <string name="home_search_hint">Rechercher un objet…</string>
+    <string name="filter_all">Tous</string>
+    <string name="filter_lost">Perdus</string>
+    <string name="filter_found">Trouvés</string>
+    <string name="home_publish">Publier une annonce</string>
+    <string name="home_empty_title">Aucune annonce ne correspond</string>
+    <string name="home_empty_body">Essayez un autre mot-clé ou une autre catégorie, ou publiez votre propre annonce.</string>
+    <string name="home_empty_action">Publier une annonce</string>
+    <string name="cd_profile_avatar">Mon profil</string>
+    <string name="cd_announcement_photo">Photo : %1$s</string>
+    <string name="categories_label">Catégories</string>
+
+    <!-- Types et statuts -->
+    <string name="badge_lost">Perdu</string>
+    <string name="badge_found">Trouvé</string>
+    <string name="status_active">Active</string>
+    <string name="status_returned">Restituée</string>
+    <string name="status_archived">Archivée</string>
+    <string name="badge_type_status">%1$s · %2$s</string>
+    <string name="status_detail_active">Actif</string>
+    <string name="status_detail_returned">Restitué</string>
+
+    <!-- Dates relatives -->
+    <string name="date_today">Aujourd’hui</string>
+    <string name="date_yesterday">Hier</string>
+    <string name="date_days_ago">Il y a %1$d j</string>
+    <string name="published_today">Publiée aujourd’hui</string>
+    <string name="published_yesterday">Publiée hier</string>
+    <string name="published_days_ago">Publiée il y a %1$d jours</string>
+
+    <!-- Catégories -->
+    <string name="category_phones">Téléphones</string>
+    <string name="category_keys">Clés</string>
+    <string name="category_bags">Sacs</string>
+    <string name="category_wallets">Portefeuilles</string>
+    <string name="category_cards">Cartes</string>
+    <string name="category_electronics">Électronique</string>
+    <string name="category_clothes">Vêtements</string>
+    <string name="category_other">Autres</string>
+
+    <!-- Couleurs -->
+    <string name="color_black">Noir</string>
+    <string name="color_white">Blanc</string>
+    <string name="color_grey">Gris</string>
+    <string name="color_red">Rouge</string>
+    <string name="color_blue">Bleu</string>
+    <string name="color_green">Vert</string>
+    <string name="color_brown">Marron</string>
+    <string name="color_other">Autre</string>
+    <string name="color_unknown">Non précisée</string>
+
+    <!-- ===== Publier ===== -->
+    <string name="publish_title">Publier une annonce</string>
+    <string name="publish_edit_title">Modifier l’annonce</string>
+    <string name="publish_tab_lost">J’ai perdu un objet</string>
+    <string name="publish_tab_found">J’ai trouvé un objet</string>
+    <string name="publish_photos_title">Photos</string>
+    <string name="publish_photos_empty_lost">Ajoutez jusqu’à 5 photos de l’objet depuis votre galerie.</string>
+    <string name="publish_photos_empty_found">Prenez l’objet en photo ou choisissez une image dans votre galerie. Vous pouvez en ajouter plusieurs.</string>
+    <string name="publish_photos_count">%1$d / %2$d photos</string>
+    <string name="publish_photos_max">5 photos maximum. Supprimez-en une pour en ajouter une autre.</string>
+    <string name="publish_add_photo_title">Ajouter une photo</string>
+    <string name="publish_pick_gallery">Choisir dans la galerie</string>
+    <string name="publish_take_photo">Prendre une photo</string>
+    <string name="publish_add_photo">Ajouter</string>
+    <string name="cd_remove_photo">Supprimer la photo %1$d</string>
+    <string name="cd_photo_thumb">Photo %1$d de l’objet</string>
+    <string name="cd_add_photo_gallery">Ajouter des photos depuis la galerie</string>
+    <string name="cd_add_photo_camera">Prendre une autre photo</string>
+    <string name="publish_analyze">Analyser avec l’IA</string>
+    <string name="publish_analysis_done">Analyse terminée · Suggestions à vérifier</string>
+    <string name="publish_analysis_none">Lancez l’analyse pour obtenir des suggestions de nom, de catégorie et de couleur.</string>
+    <string name="analysis_card_title">Analyse automatique (suggestions)</string>
+    <string name="analysis_label">Type d’objet (Étiquetage)</string>
+    <string name="analysis_label_value">%1$s · %2$d %%</string>
+    <string name="analysis_text">Texte détecté (OCR)</string>
+    <string name="analysis_text_none">Aucun</string>
+    <string name="analysis_color">Couleur dominante (Palette)</string>
+    <string name="analysis_disclaimer">Ces résultats sont des suggestions. Vérifiez-les ou corrigez-les avant publication.</string>
+    <string name="ai_suggestion_chip">Suggestion IA : à vérifier</string>
+    <string name="label_item_name">Nom de l’objet *</string>
+    <string name="hint_item_name">Ex. : iPhone 13 noir</string>
+    <string name="label_category">Catégorie *</string>
+    <string name="hint_category">Choisir une catégorie</string>
+    <string name="label_color">Couleur</string>
+    <string name="hint_color">Ex. : lilas, bleu marine, argent</string>
+    <string name="colors_detected">Couleurs détectées sur la photo (touchez pour choisir) :</string>
+    <string name="cd_color_chip">Choisir la couleur %1$s</string>
+    <string name="label_description">Description</string>
+    <string name="hint_description">Signes distinctifs, contenu, état…</string>
+    <string name="label_location">Lieu sur le campus *</string>
+    <string name="label_date_lost">Date de perte *</string>
+    <string name="label_date_found">Date de découverte *</string>
+    <string name="hint_date">Choisir une date</string>
+    <string name="publish_submit">Publier l’annonce</string>
+    <string name="publish_save">Enregistrer les modifications</string>
+    <string name="publish_loading">Publication…</string>
+    <string name="publish_success">Annonce publiée.</string>
+    <string name="publish_uploading">Envoi des photos (%1$d/%2$d)…</string>
+    <string name="publish_saving">Enregistrement…</string>
+    <string name="error_camera_unavailable">Aucune application d’appareil photo n’est disponible sur cet appareil.</string>
+    <string name="error_photo_read">Impossible de lire cette photo. Choisissez-en une autre.</string>
+    <string name="error_photo_too_large">Photo trop lourde. Choisissez une autre photo.</string>
+    <string name="error_date_future">La date ne peut pas être dans le futur. Choisissez une autre date.</string>
+    <string name="publish_updated">Annonce mise à jour.</string>
+    <string name="error_photo_required">Ajoutez au moins une photo de l’objet.</string>
+    <string name="error_item_name">Indiquez le nom de l’objet.</string>
+    <string name="error_category">Veuillez choisir une catégorie.</string>
+    <string name="error_location">Placez le lieu sur la carte.</string>
+    <string name="error_date">Choisissez la date.</string>
+    <string name="error_form_summary">Vérifiez les champs signalés en rouge.</string>
+    <string name="date_picker_title_lost">Date de perte</string>
+    <string name="date_picker_title_found">Date de découverte</string>
+
+    <!-- ===== Aperçu photo ===== -->
+    <string name="preview_title">Aperçu de la photo</string>
+    <string name="preview_analyze">Analyser avec l’IA</string>
+    <string name="preview_retake">Reprendre la photo</string>
+    <string name="cd_preview_photo">Photo prise</string>
+
+    <!-- ===== Analyse IA ===== -->
+    <string name="ai_status_prepare">Préparation de la photo…</string>
+    <string name="ai_error">L’analyse n’a pas abouti. Vous pouvez remplir les champs vous-même.</string>
+    <string name="ai_status_detect">Détection de l’objet…</string>
+    <string name="ai_status_text">Lecture du texte visible…</string>
+    <string name="ai_status_color">Analyse de la couleur…</string>
+    <string name="ai_status_ready">Préparation des suggestions…</string>
+    <string name="ai_status_static">Analyse en cours…</string>
+    <string name="ai_hint">Les résultats seront proposés comme suggestions modifiables.</string>
+    <string name="ai_cancel">Annuler</string>
+    <string name="cd_ai_animation">Analyse de la photo en cours</string>
+
+    <!-- ===== Carte ===== -->
+    <string name="map_unavailable">Carte indisponible</string>
+    <string name="map_unavailable_body">Vérifiez votre connexion. Vous pouvez continuer et préciser le lieu par écrit.</string>
+    <string name="map_tap_to_place">Touchez pour placer le lieu sur la carte</string>
+    <string name="map_change">Modifier</string>
+    <string name="map_point_chosen">Point choisi sur la carte</string>
+    <string name="map_captured_position">Position capturée</string>
+    <string name="cd_map_preview">Aperçu du lieu sur la carte. Touchez pour le modifier.</string>
+    <string name="cd_map_readonly">Lieu de l’annonce sur la carte</string>
+    <string name="cd_map_marker">Lieu sélectionné</string>
+    <string name="picker_title">Choisir le lieu</string>
+    <string name="picker_instructions">Touchez la carte ou faites glisser le marqueur pour indiquer l’endroit exact.</string>
+    <string name="picker_my_location">Ma position</string>
+    <string name="picker_precision_label">Précision (facultatif)</string>
+    <string name="picker_precision_hint">Ex. : près des tables de travail</string>
+    <string name="picker_confirm">Confirmer ce lieu</string>
+    <string name="map_edit_location">Modifier le lieu</string>
+    <string name="location_updated">Lieu mis à jour.</string>
+    <string name="location_searching">Recherche de votre position…</string>
+    <string name="location_unavailable">Position indisponible : touchez la carte pour placer le lieu.</string>
+    <string name="location_permission_denied">Localisation refusée : touchez la carte pour placer le lieu à la main.</string>
+    <string name="map_attribution">© contributeurs OpenStreetMap</string>
+
+    <!-- ===== Détail ===== -->
+    <string name="detail_color">Couleur</string>
+    <string name="detail_location">Lieu</string>
+    <string name="detail_date_lost">Date de perte</string>
+    <string name="detail_date_found">Date de découverte</string>
+    <string name="detail_contact">Contacter l’utilisateur</string>
+    <string name="detail_matches">Voir les correspondances</string>
+    <string name="detail_author_subtitle">Coordonnées visibles via la messagerie</string>
+    <string name="detail_location_title">Lieu sur la carte</string>
+    <string name="cd_gallery">Galerie de photos, photo %1$d sur %2$d</string>
+    <string name="detail_not_found">Cette annonce n’existe plus.</string>
+
+    <!-- ===== Correspondances ===== -->
+    <string name="matches_title">Correspondances possibles</string>
+    <string name="matches_intro">Ces suggestions sont calculées à partir de la catégorie, des étiquettes de l’analyse, de la couleur, du lieu et de la date. Le pourcentage est une indication, pas une preuve que l’objet vous appartient.</string>
+    <string name="matches_your_announcement">Votre annonce · %1$s</string>
+    <string name="matches_other_type">%1$s · %2$s</string>
+    <string name="matches_object_found">Objet trouvé</string>
+    <string name="matches_object_lost">Objet perdu</string>
+    <plurals name="matches_count">
+        <item quantity="one">%1$d suggestion au-dessus du seuil de %2$d %%</item>
+        <item quantity="other">%1$d suggestions au-dessus du seuil de %2$d %%</item>
+    </plurals>
+    <string name="matches_score">%1$d %% de correspondance</string>
+    <string name="matches_indication">Indication</string>
+    <string name="matches_view">Voir l’annonce</string>
+    <string name="matches_contact">Contacter</string>
+    <string name="matches_footer">Nous continuerons à rechercher des objets similaires.</string>
+    <string name="matches_empty_title">Aucune correspondance pour l’instant</string>
+    <string name="matches_empty_body">Nous comparons votre annonce aux nouvelles publications. Revenez plus tard ou ajoutez des détails pour améliorer les suggestions.</string>
+    <string name="cd_match_score">Score de correspondance : %1$d pour cent</string>
+
+    <!-- ===== Messages ===== -->
+    <string name="messages_title">Messages</string>
+    <string name="messages_search_hint">Rechercher une conversation</string>
+    <string name="messages_empty_title">Aucune conversation</string>
+    <string name="messages_empty_body">Contactez l’auteur d’une annonce depuis son détail pour démarrer une conversation.</string>
+    <string name="messages_empty_action">Parcourir les annonces</string>
+    <string name="messages_no_message_yet">Aucun message pour le moment</string>
+    <string name="cd_unread">Non lu</string>
+    <string name="time_yesterday">Hier</string>
+
+    <!-- ===== Conversation ===== -->
+    <string name="chat_linked">Annonce liée · %1$s</string>
+    <string name="chat_input_hint">Écrire un message…</string>
+    <string name="chat_send">Envoyer</string>
+    <string name="chat_sending">Envoi en cours…</string>
+    <string name="chat_failed">Échec de l’envoi. Touchez le message pour réessayer.</string>
+    <string name="chat_load_error">Impossible de charger les messages. Nouvel essai automatique…</string>
+    <string name="cd_retry_message">Réessayer l’envoi de ce message</string>
+    <string name="chat_sent_at">Envoyé · %1$s</string>
+    <string name="chat_ai_draft_chip">Message suggéré</string>
+    <string name="chat_ai_draft_hint">Ce brouillon n’est envoyé que si vous appuyez sur Envoyer. Modifiez-le librement.</string>
+    <string name="cd_clear_draft">Effacer le message suggéré</string>
+    <string name="chat_empty_body">Présentez-vous et décrivez l’objet pour vérifier qu’il s’agit du bon.</string>
+    <string name="intro_template_found">Bonjour %1$s, je pense que l’objet « %2$s » que vous avez trouvé (%3$s, %4$s) pourrait être à moi. Pouvez-vous me dire s’il présente un signe distinctif, pour que je vous confirme qu’il m’appartient ?</string>
+    <string name="intro_template_lost">Bonjour %1$s, j’ai peut-être trouvé votre « %2$s » (%3$s). Pouvez-vous me le décrire, pour vérifier qu’il vous appartient ? Nous pourrons ensuite convenir d’un lieu de remise sur le campus.</string>
+
+    <!-- ===== Profil ===== -->
+    <string name="profile_edit">Modifier mon profil</string>
+    <string name="profile_my_announcements">Mes annonces</string>
+    <string name="profile_filter_all">Toutes</string>
+    <string name="profile_filter_lost">Perdues</string>
+    <string name="profile_filter_found">Trouvées</string>
+    <string name="profile_filter_returned">Restituées</string>
+    <string name="profile_item_lost">Objet perdu · %1$s</string>
+    <string name="profile_item_found">Objet trouvé · %1$s</string>
+    <string name="profile_item_returned">Objet restitué · %1$s</string>
+    <string name="profile_mark_returned">Marquer comme restitué</string>
+    <string name="profile_logout">Se déconnecter</string>
+    <string name="profile_empty_title">Aucune annonce ici</string>
+    <string name="profile_empty_body">Publiez une annonce pour un objet perdu ou trouvé : elle apparaîtra dans cette liste.</string>
+    <string name="profile_empty_action">Publier une annonce</string>
+    <string name="returned_dialog_title">Marquer comme restituée ?</string>
+    <string name="returned_dialog_body">L’annonce « %1$s » n’apparaîtra plus dans le fil ni dans les correspondances.</string>
+    <string name="returned_done">Annonce marquée comme restituée.</string>
+    <string name="logout_dialog_title">Se déconnecter ?</string>
+    <string name="logout_dialog_body">Vous devrez saisir à nouveau votre e-mail et votre mot de passe.</string>
+
+    <!-- ===== Modifier mon profil ===== -->
+    <string name="edit_profile_title">Modifier mon profil</string>
+    <string name="edit_profile_change_photo">Changer la photo</string>
+    <string name="edit_profile_info_section">Informations</string>
+    <string name="edit_profile_save">Enregistrer le profil</string>
+    <string name="edit_profile_saved">Profil mis à jour.</string>
+    <string name="edit_profile_photo_error">Cette photo ne peut pas être lue. Choisissez-en une autre.</string>
+    <string name="edit_profile_photo_changed">Nouvelle photo sélectionnée. Enregistrez pour l’appliquer.</string>
+    <string name="edit_profile_saving">Enregistrement…</string>
+    <string name="edit_profile_password_section">Changer le mot de passe</string>
+    <string name="label_current_password">Mot de passe actuel *</string>
+    <string name="label_new_password">Nouveau mot de passe *</string>
+    <string name="label_confirm_new_password">Confirmer le nouveau mot de passe *</string>
+    <string name="edit_profile_password_submit">Changer le mot de passe</string>
+    <string name="edit_profile_password_saved">Mot de passe modifié.</string>
+    <string name="cd_profile_photo">Photo de profil</string>
+    <string name="edit_profile_email_note">L’adresse e-mail universitaire ne peut pas être modifiée.</string>
+
+    <!-- ===== Traduction des étiquettes ML Kit (clé anglaise → libellé affiché), mêmes positions ===== -->
+    <!-- Cadrage de l'objet pour l'analyse -->
+    <string name="crop_title">Cadrer l’objet</string>
+    <string name="crop_hint">Ajustez le cadre autour de l’objet seulement (sans la main ni le fond) pour une analyse plus précise. La photo publiée reste entière.</string>
+    <string name="crop_analyze">Analyser cette zone</string>
+    <string name="crop_full">Toute la photo</string>
+    <string name="crop_error">Impossible d’ouvrir la photo.</string>
+    <string name="cd_crop_area">Zone de cadrage : glissez les coins pour l’ajuster, l’intérieur pour la déplacer</string>
+    <string name="publish_crop">Cadrer l’objet</string>
+    <string name="publish_crop_hint">Résultat imprécis ? Touchez une photo pour cadrer l’objet.</string>
+    <string name="preview_crop">Cadrer l’objet</string>
+    <string name="cd_crop_photo">Cadrer l’objet sur la photo %1$d</string>
+    <string-array name="mlkit_label_keys" translatable="false">
+        <item>mobile phone</item>
+        <item>bag</item>
+        <item>backpack</item>
+        <item>handbag</item>
+        <item>luggage</item>
+        <item>wallet</item>
+        <item>glasses</item>
+        <item>sunglasses</item>
+        <item>jacket</item>
+        <item>jeans</item>
+        <item>shoe</item>
+        <item>sneakers</item>
+        <item>cap</item>
+        <item>hat</item>
+        <item>scarf</item>
+        <item>computer</item>
+        <item>laptop</item>
+        <item>headphones</item>
+        <item>watch</item>
+        <item>camera</item>
+        <item>umbrella</item>
+        <item>bottle</item>
+        <item>book</item>
+        <item>pen</item>
+        <item>gadget</item>
+        <item>keyboard</item>
+        <item>tablet computer</item>
+        <item>cell phone</item>
+        <item>smartphone</item>
+        <item>telephone</item>
+        <item>electronic device</item>
+        <item>headset</item>
+        <item>key</item>
+        <item>keychain</item>
+        <item>purse</item>
+        <item>suitcase</item>
+        <item>id card</item>
+        <item>coat</item>
+        <item>shirt</item>
+        <item>sweater</item>
+        <item>glove</item>
+        <item>mouse</item>
+        <item>earphones</item>
+        <item>earbuds</item>
+        <item>wristwatch</item>
+        <item>briefcase</item>
+        <item>hoodie</item>
+        <item>boot</item>
+        <item>jewellery</item>
+        <item>necklace</item>
+        <item>bracelet</item>
+        <item>charger</item>
+        <item>notebook</item>
+        <item>calculator</item>
+        <item>badge</item>
+        <item>passport</item>
+        <item>credit card</item>
+        <item>t-shirt</item>
+        <item>dress</item>
+        <item>monitor</item>
+        <item>water bottle</item>
+        <item>pencil case</item>
+        <item>helmet</item>
+        <item>remote control</item>
+        <item>music player</item>
+        <item>hard drive</item>
+        <item>speaker</item>
+        <item>microphone</item>
+        <item>sock</item>
+        <item>sweatshirt</item>
+        <item>cardigan</item>
+        <item>jersey</item>
+        <item>lab coat</item>
+        <item>suit</item>
+        <item>tie</item>
+        <item>mug</item>
+        <item>binder</item>
+        <item>eraser</item>
+        <item>ruler</item>
+        <item>scissors</item>
+        <item>lipstick</item>
+        <item>perfume</item>
+        <item>lighter</item>
+        <item>ball</item>
+        <item>padlock</item>
+        <item>racket</item>
+        <item>plush</item>
+        <item>beanie</item>
+        <item>goggles</item>
+        <item>blazer</item>
+        <item>shorts</item>
+    </string-array>
+    <string-array name="mlkit_label_fr">
+        <item>Téléphone</item>
+        <item>Sac</item>
+        <item>Sac à dos</item>
+        <item>Sac à main</item>
+        <item>Bagage</item>
+        <item>Portefeuille</item>
+        <item>Lunettes</item>
+        <item>Lunettes de soleil</item>
+        <item>Veste</item>
+        <item>Jean</item>
+        <item>Chaussure</item>
+        <item>Baskets</item>
+        <item>Casquette</item>
+        <item>Chapeau</item>
+        <item>Écharpe</item>
+        <item>Ordinateur</item>
+        <item>Ordinateur portable</item>
+        <item>Écouteurs</item>
+        <item>Montre</item>
+        <item>Appareil photo</item>
+        <item>Parapluie</item>
+        <item>Bouteille</item>
+        <item>Livre</item>
+        <item>Stylo</item>
+        <item>Appareil électronique</item>
+        <item>Clavier</item>
+        <item>Tablette</item>
+        <item>Téléphone</item>
+        <item>Smartphone</item>
+        <item>Téléphone</item>
+        <item>Appareil électronique</item>
+        <item>Casque</item>
+        <item>Clé</item>
+        <item>Porte-clés</item>
+        <item>Porte-monnaie</item>
+        <item>Valise</item>
+        <item>Carte d’identité</item>
+        <item>Manteau</item>
+        <item>Chemise</item>
+        <item>Pull</item>
+        <item>Gant</item>
+        <item>Souris</item>
+        <item>Écouteurs</item>
+        <item>Écouteurs</item>
+        <item>Montre</item>
+        <item>Porte-documents</item>
+        <item>Sweat à capuche</item>
+        <item>Botte</item>
+        <item>Bijou</item>
+        <item>Collier</item>
+        <item>Bracelet</item>
+        <item>Chargeur</item>
+        <item>Cahier</item>
+        <item>Calculatrice</item>
+        <item>Badge</item>
+        <item>Passeport</item>
+        <item>Carte bancaire</item>
+        <item>T-shirt</item>
+        <item>Robe</item>
+        <item>Écran</item>
+        <item>Gourde</item>
+        <item>Trousse</item>
+        <item>Casque</item>
+        <item>Télécommande</item>
+        <item>Baladeur</item>
+        <item>Disque dur</item>
+        <item>Enceinte</item>
+        <item>Micro</item>
+        <item>Chaussette</item>
+        <item>Sweat</item>
+        <item>Gilet</item>
+        <item>Maillot</item>
+        <item>Blouse</item>
+        <item>Costume</item>
+        <item>Cravate</item>
+        <item>Tasse</item>
+        <item>Classeur</item>
+        <item>Gomme</item>
+        <item>Règle</item>
+        <item>Ciseaux</item>
+        <item>Rouge à lèvres</item>
+        <item>Parfum</item>
+        <item>Briquet</item>
+        <item>Ballon</item>
+        <item>Cadenas</item>
+        <item>Raquette</item>
+        <item>Peluche</item>
+        <item>Bonnet</item>
+        <item>Lunettes de protection</item>
+        <item>Blazer</item>
+        <item>Short</item>
+    </string-array>
+    <string name="publish_in_progress">Publication en cours, patientez…</string>
+</resources>

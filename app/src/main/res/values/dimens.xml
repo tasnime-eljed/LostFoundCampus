@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Les maquettes font 390 × 844 : leurs mesures se lisent directement en dp. -->
+<resources>
+    <!-- Espacements (échelle de 4) -->
+    <dimen name="lf_space_xxs">2dp</dimen>
+    <dimen name="lf_space_xs">4dp</dimen>
+    <dimen name="lf_space_sm">8dp</dimen>
+    <dimen name="lf_space_md">12dp</dimen>
+    <dimen name="lf_space_lg">16dp</dimen>
+    <dimen name="lf_space_xl">20dp</dimen>
+    <dimen name="lf_space_xxl">24dp</dimen>
+    <dimen name="lf_space_xxxl">32dp</dimen>
+    <dimen name="lf_space_huge">48dp</dimen>
+    <dimen name="lf_screen_padding">20dp</dimen>
+
+    <!-- Rayons -->
+    <dimen name="lf_radius_sm">8dp</dimen>
+    <dimen name="lf_radius_md">12dp</dimen>
+    <dimen name="lf_radius_lg">16dp</dimen>
+    <dimen name="lf_radius_xl">20dp</dimen>
+    <dimen name="lf_radius_logo">18dp</dimen>
+    <dimen name="lf_radius_bubble">16dp</dimen>
+    <dimen name="lf_radius_bubble_tail">4dp</dimen>
+    <dimen name="lf_radius_bubble_input">26dp</dimen>
+
+    <!-- Traits -->
+    <dimen name="lf_stroke">1dp</dimen>
+    <dimen name="lf_stroke_focused">2dp</dimen>
+
+    <!-- Composants -->
+    <dimen name="lf_touch_target">48dp</dimen>
+    <dimen name="lf_button_height">52dp</dimen>
+    <dimen name="lf_segmented_height">48dp</dimen>
+    <dimen name="lf_logo_size">72dp</dimen>
+    <dimen name="lf_avatar_sm">40dp</dimen>
+    <dimen name="lf_avatar_md">48dp</dimen>
+    <dimen name="lf_avatar_lg">88dp</dimen>
+    <dimen name="lf_thumb_card">88dp</dimen>
+    <dimen name="lf_thumb_sm">44dp</dimen>
+    <dimen name="lf_thumb_photo">88dp</dimen>
+    <dimen name="lf_thumb_remove_inset">10dp</dimen>
+    <dimen name="lf_unread_dot">8dp</dimen>
+    <dimen name="lf_swatch_dot">14dp</dimen>
+    <dimen name="lf_icon_sm">18dp</dimen>
+    <dimen name="lf_icon_md">24dp</dimen>
+    <dimen name="lf_icon_lg">48dp</dimen>
+    <dimen name="lf_mini_map_height">168dp</dimen>
+    <dimen name="lf_gallery_height">260dp</dimen>
+    <dimen name="lf_progress_track">8dp</dimen>
+    <dimen name="lf_bubble_max_width">280dp</dimen>
+    <dimen name="lf_send_button">52dp</dimen>
+    <dimen name="lf_badge_padding_h">10dp</dimen>
+    <dimen name="lf_badge_padding_v">3dp</dimen>
+    <dimen name="lf_dot_indicator">8dp</dimen>
+    <dimen name="lf_card_elevation">0dp</dimen>
+    <dimen name="lf_fab_elevation">6dp</dimen>
+    <dimen name="lf_content_max_width">560dp</dimen>
+
+    <!-- Animation IA -->
+    <dimen name="ai_frame_stroke">3dp</dimen>
+    <dimen name="ai_glow_stroke">10dp</dimen>
+    <dimen name="ai_glow_blur">16dp</dimen>
+    <dimen name="ai_frame_radius">24dp</dimen>
+    <dimen name="ai_band_height">96dp</dimen>
+    <dimen name="ai_frame_margin">32dp</dimen>
+</resources>

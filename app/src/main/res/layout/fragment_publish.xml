@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lf_cream">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/lf_screen_padding"
+            android:paddingTop="@dimen/lf_space_lg"
+            android:paddingEnd="@dimen/lf_screen_padding"
+            android:paddingBottom="@dimen/lf_space_xxl">
+
+            <include
+                android:id="@+id/header"
+                layout="@layout/layout_screen_header" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabsType"
+                style="@style/Widget.LF.SegmentedTabs.Publish"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/lf_segmented_height"
+                android:layout_marginTop="@dimen/lf_space_lg">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/publish_tab_lost" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/publish_tab_found" />
+            </com.google.android.material.tabs.TabLayout>
+
+            <!-- Photos -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardPhotos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/lf_space_lg">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical"
+                    android:padding="@dimen/lf_space_lg">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/publish_photos_title"
+                            android:textAppearance="@style/TextAppearance.LF.TitleMedium" />
+
+                        <TextView
+                            android:id="@+id/txtPhotoCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/TextAppearance.LF.Caption" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtPhotosHint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/lf_space_xs"
+                        android:textAppearance="@style/TextAppearance.LF.BodySmall" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvPhotos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/lf_space_sm"
+                        android:clipToPadding="false"
+                        android:orientation="horizontal"
+                        android:overScrollMode="never" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnAddPhotos"
+                        style="@style/Widget.LF.Button.Outlined"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/lf_space_md"
+                        app:icon="@drawable/ic_gallery"
+                        app:iconGravity="textStart" />
+
+                    <TextView
+                        android:id="@+id/txtPhotoError"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/lf_space_xs"
+                        android:accessibilityLiveRegion="polite"
+                        android:textAppearance="@style/TextAppearance.LF.Caption"
+                        android:textColor="@color/lf_error"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/groupAnalyze"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/lf_space_md"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.divider.MaterialDivider
+                            style="@style/Widget.LF.Divider"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/txtAnalysisStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/lf_space_md"
+                            android:textAppearance="@style/TextAppearance.LF.BodySmall" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnAnalyze"
+                            style="@style/Widget.LF.Button.Text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/publish_analyze"
+                            app:icon="@drawable/ic_sparkle" />
+
+                        <TextView
+                            android:id="@+id/txtCropHint"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/lf_space_xs"
+                            android:text="@string/publish_crop_hint"
+                            android:textAppearance="@style/TextAppearance.LF.BodySmall"
+                            android:visibility="gone" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnCrop"
+                            style="@style/Widget.LF.Button.Text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/publish_crop"
+                            android:visibility="gone"
+                            app:icon="@drawable/ic_crop" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Suggestions d'analyse -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardAnalysis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/lf_space_md"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/lf_space_lg">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/analysis_card_title"
+                        android:textAppearance="@style/TextAppearance.LF.TitleMedium"
+                        android:textColor="@color/lf_violet_600" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipAi"
+                        style="@style/Widget.LF.Chip.Ai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:text="@string/ai_suggestion_chip" />
+
+                    <include
+                        android:id="@+id/rowLabel"
+                        layout="@layout/view_analysis_row" />
+
+                    <include
+                        android:id="@+id/rowText"
+                        layout="@layout/view_analysis_row" />
+
+                    <include
+                        android:id="@+id/rowColor"
+                        layout="@layout/view_analysis_row" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/lf_space_md"
+                        android:text="@string/analysis_disclaimer"
+                        android:textAppearance="@style/TextAppearance.LF.BodySmall" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Champs -->
+            <TextView
+                style="@style/Widget.LF.FieldLabel"
+                android:layout_marginTop="@dimen/lf_space_xl"
+                android:labelFor="@id/etTitle"
+                android:text="@string/label_item_name" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etTitle"
+                    style="@style/Widget.LF.EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_item_name"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapSentences"
+                    android:maxLength="80" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                style="@style/Widget.LF.FieldLabel"
+                android:labelFor="@id/actCategory"
+                android:text="@string/label_category" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCategory"
+                style="@style/Widget.LF.TextField.Dropdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/actCategory"
+                    style="@style/Widget.LF.EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_category"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                style="@style/Widget.LF.FieldLabel"
+                android:labelFor="@id/etColor"
+                android:text="@string/label_color" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etColor"
+                    style="@style/Widget.LF.EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_color"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapSentences"
+                    android:maxLength="30" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/txtColorsDetected"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/lf_space_xs"
+                android:text="@string/colors_detected"
+                android:textAppearance="@style/TextAppearance.LF.BodySmall"
+                android:visibility="gone" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipsColors"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:chipSpacingHorizontal="@dimen/lf_space_sm" />
+
+            <TextView
+                style="@style/Widget.LF.FieldLabel"
+                android:labelFor="@id/etDescription"
+                android:text="@string/label_description" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:counterEnabled="true"
+                app:counterMaxLength="300">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDescription"
+                    style="@style/Widget.LF.EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:hint="@string/hint_description"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:maxLength="300"
+                    android:minLines="3" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                style="@style/Widget.LF.FieldLabel"
+                android:text="@string/label_location" />
+
+            <include
+                android:id="@+id/miniMap"
+                layout="@layout/view_mini_map" />
+
+            <TextView
+                android:id="@+id/txtLocationError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/lf_space_xs"
+                android:accessibilityLiveRegion="polite"
+                android:text="@string/error_location"
+                android:textAppearance="@style/TextAppearance.LF.Caption"
+                android:textColor="@color/lf_error"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txtDateLabel"
+                style="@style/Widget.LF.FieldLabel"
+                android:labelFor="@id/etDate"
+                android:text="@string/label_date_lost" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:endIconDrawable="@drawable/ic_calendar"
+                app:endIconMode="custom"
+                app:endIconContentDescription="@string/hint_date">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDate"
+                    style="@style/Widget.LF.EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:hint="@string/hint_date"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <FrameLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_bottom_bar"
+        android:paddingStart="@dimen/lf_screen_padding"
+        android:paddingTop="@dimen/lf_space_md"
+        android:paddingEnd="@dimen/lf_screen_padding"
+        android:paddingBottom="@dimen/lf_space_md"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPublish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/publish_submit" />
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

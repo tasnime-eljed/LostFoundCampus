@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true">
+        <layer-list>
+            <item android:gravity="center" android:width="@dimen/lf_dot_indicator" android:height="@dimen/lf_dot_indicator">
+                <shape android:shape="oval"><solid android:color="@color/lf_violet_600" /></shape>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <item android:gravity="center" android:width="@dimen/lf_dot_indicator" android:height="@dimen/lf_dot_indicator">
+                <shape android:shape="oval"><solid android:color="@color/lf_white" /></shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

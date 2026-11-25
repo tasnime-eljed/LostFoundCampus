@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Pastille visible de 28dp centrée dans une cible tactile de 48dp. -->
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:inset="@dimen/lf_thumb_remove_inset">
+    <shape android:shape="oval">
+        <solid android:color="@color/lf_white" />
+        <stroke android:width="@dimen/lf_stroke" android:color="@color/lf_outline" />
+    </shape>
+</inset>

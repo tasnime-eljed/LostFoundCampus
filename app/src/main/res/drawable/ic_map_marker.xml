@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Marqueur de carte aux couleurs de l'app. Pointe en bas au centre. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="40dp"
+    android:height="50dp"
+    android:viewportWidth="40"
+    android:viewportHeight="50">
+    <path
+        android:fillColor="@color/lf_violet_600"
+        android:strokeColor="@color/lf_white"
+        android:strokeWidth="2"
+        android:pathData="M20,2C10.6,2 3,9.6 3,19c0,12.4 17,29 17,29s17,-16.6 17,-29C37,9.6 29.4,2 20,2z" />
+    <path
+        android:fillColor="@color/lf_peach"
+        android:pathData="M13,19a7,7 0,1 1,14 0a7,7 0,1 1,-14 0z" />
+</vector>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ligne « libellé ……… valeur » de la carte d'analyse. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/lf_space_sm"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/txtRowLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textAppearance="@style/TextAppearance.LF.Body"
+        android:textColor="@color/lf_ink_body" />
+
+    <View
+        android:id="@+id/swatch"
+        android:layout_width="@dimen/lf_swatch_dot"
+        android:layout_height="@dimen/lf_swatch_dot"
+        android:layout_marginEnd="@dimen/lf_space_sm"
+        android:background="@drawable/bg_swatch_dot"
+        android:importantForAccessibility="no"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/txtRowValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:textAppearance="@style/TextAppearance.LF.LabelStrong"
+        android:textColor="@color/lf_violet_600" />
+</LinearLayout>
